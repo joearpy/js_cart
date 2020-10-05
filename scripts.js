@@ -15,7 +15,7 @@ renderList();
 
 function renderList() {
 
-    listItemList.innerHTML = "";
+    listItemList.innerHTML = " ";
 
     let mappedItemList = itemNameList.map(function (name, index){
 
@@ -35,7 +35,7 @@ function renderList() {
         renderListItem(name);
     });
 
-    sum.innerText = getSum();
+      sum.innerText = getSum();
 }
 
 function renderListItem (text) {
@@ -48,7 +48,7 @@ function OnButtonClicked(){
     AddItem();
 }
 
-function AddItem() {
+function  AddItem() {
 
     if (!(inputItemName.value
         && inputItemCount.value
@@ -71,8 +71,8 @@ function getSum() {
     return itemCountList.reduce(function(acc, itemCount, index) {
 
         if (index == 1) {
-            acc *= itemBasePriceList[0];
+            acc *=  itemBasePriceList[0];
         }
-        return acc + itemCount * itemBasePriceList[index];
+          return acc + itemCount * itemBasePriceList[index];
     });
 }
